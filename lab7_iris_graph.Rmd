@@ -12,7 +12,10 @@ library(tidyverse)
 
 ```{r}
 petal_length_width = ggplot(iris, aes(iris$Petal.Length, iris$Petal.Width)) +
-  geom_point()
+  geom_point(aes(color = Species), pch = 20) +
+  facet_wrap(~Species, scale = "free") + 
+  labs(x = "Petal Length", y = "Petal Width", title = "Petal Width as Function of Petal Length Across Iris Species") +
+  theme_classic()
 petal_length_width
 ```
 
