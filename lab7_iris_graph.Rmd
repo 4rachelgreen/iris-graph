@@ -7,5 +7,12 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r}
+petal_length_width = ggplot(iris, aes(iris$Petal.Length, iris$Petal.Width)) +
+  geom_point()
+petal_length_width
 ```
 
